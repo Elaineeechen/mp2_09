@@ -4,7 +4,7 @@ subtitle: "SDS 192"
 author: 
 - name: Nancy Jimenez
   affiliation: Smith College
-- name: Author Two
+- name: Aaliyah Viera
   affiliation: Smith College
 - name: Author Three
   affiliation: Smith College
@@ -59,9 +59,11 @@ contributors_loc_donations
 
 
 
-
-
-
+#Which state is each candidate located?
+candidate_loc_donations <- 
+  candidates |>
+  select(cand_id, cand_name, cand_st)
+candidate_loc_donations
 
 
 
