@@ -70,8 +70,10 @@ contributions
 
 
 
-
-
+#Which state is each candidate located?
+candidate_loc_donations <- 
+  candidates |>
+  select(cand_id, cand_name, cand_st)
 
 
 
