@@ -1,6 +1,6 @@
 # Mini-Project 2
 
-# Overview
+# Overview 
 
 > Please note that many aspects of this project are informed by similar projects designed for Professor Albert Kim's and Professor Ben Baumer's SDS 192: Introduction to Data Science courses at Smith College. 
 
