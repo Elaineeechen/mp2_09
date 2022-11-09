@@ -6,7 +6,7 @@ author:
   affiliation: Smith College
 - name: Aaliyah Viera
   affiliation: Smith College
-- name: Author Three
+- name: Elaine Chen
   affiliation: Smith College
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
 editor: 
@@ -83,7 +83,12 @@ candidate_loc_donations
 # Group member 3 work here!
 
 
-
+#Are contributors donating support money to candidates from their own states?
+contributors_loc_donations |>
+  inner_join(candidate_loc_donations, by = "cand_id") |>
+  mutate(did_the_states_match = case_when(state == cand_st ~ "Yes", TRUE ~ "No")) |>
+  group_by(did_the_states_match) |>
+  summarize(number_of_yes_or_no = n())
 
 
 
@@ -104,7 +109,9 @@ candidate_loc_donations
 
 # Blog post
 
-Compose your blog post here...
+The question we wanted to answer through the data analytical process was investigating if contributors supporting candidates were particularly biased to candidates from their own state. When looking at the contributions data set, we saw information on the contributors and the amount of money they donated in the 2016 election cycle. Then, when looking at the candidates data set we were able to see the data on each candidate and the amount of donations they got from each contributor in the 2015-2016 election cycle. In the first data chunk, we wrangled the data from the contributions data set to find out what state each contributor was located in, and how much money they donated throughout the election. In the second chuck, we did a similar wrangling, looking at the candidate data set, finding out  location and donation size. Lastly, in the third data set, we joined the two wrangled data frames in order to see if there was any overlap between candidates and contributors. 
+To answer the first question, we created a table by using candidates as the observation and by selecting candidate ID, candidate name, and candidate state as the columns. The candidate state column indicates that the states candidates currently live in are quite dispersed, and the states that have the highest number of candidates are California, Texas, and Florida. To answer the second question, we also created a table that used contributors, specifically those who donated support money, as the observation. We then selected contributor ID, contributor name, contributor state, transaction amount, and transaction type as the column. The contributor state column demonstrates that although the states that contributors currently live in are dispersed, the number of contributors from Ohio, Pennsylvania, and North Carolina are the highest. To answer the third question, we joined the tables created in the previous two questions by using candidate ID as the joining key, added a new variable based on whether the states that candidates and contributors lived in matched, and then aggregated the data to create a final table that contains the number of matches and mismatches. The result demonstrates that cases where contributors did not donate support money to candidates from their own state are much higher.
+From our analysis of the data, it was clear that contributors were donating more money to support candidates that were not from their own states. This implies that there are more important outside factors, other than where the candidates reside, that influence who contributors may tend to support, such as political beliefs, gender, occupation, and or family views of certain political candidates. When considering the ethical concerns behind this analysis and when joining data frames across data frames it is important to consider why certain specific information regarding data frames do not appear and or are missing. Specifically, in the candidates data frame, occupation is not a listed column name whereas in the individuals and transactions data frame it is. This may reveal an author bias in hiding other important and underlying factors that may reveal trends in who contributors tend to support more. It is important that our analysis of data is unbiased and allows data scientists and the public to analyze information from a variety of sources and viewpoints and is easily accessible to them. Rather, it takes joining and data wrangling to uncover these trends. 
 
 
 
