@@ -2,7 +2,7 @@
 title: "SDS 192 Mini-Project 2"
 subtitle: "SDS 192"
 author: 
-- name: Author One
+- name: Nancy Jimenez
   affiliation: Smith College
 - name: Author Two
   affiliation: Smith College
@@ -44,25 +44,14 @@ contributions
 
 ```{r analysis-1}
 # Group member 1 work here!
+#Which state is each contributor located?
+contributors_loc_donations <-
+  contributions |>
+  select(cand_id, name, state, transaction_amt, transaction_tp, tran_id) |>
+  filter(transaction_tp == "24E") |>
+  arrange(desc(transaction_amt))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+contributors_loc_donations
 ```
 
 ```{r analysis-2}
