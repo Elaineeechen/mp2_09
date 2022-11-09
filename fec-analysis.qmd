@@ -4,7 +4,7 @@ subtitle: "SDS 192"
 author: 
 - name: Author One
   affiliation: Smith College
-- name: Author Two
+- name: Aaliyah Viera
   affiliation: Smith College
 - name: Author Three
   affiliation: Smith College
