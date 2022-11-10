@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Nancy Jimenez">
+<meta name="author" content="Aaliyah Viera">
+<meta name="author" content="Elaine Chen">
+<meta name="dcterms.date" content="2022-11-10">
+
+<title>SDS 192 Mini-Project 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="fec-analysis_files/libs/clipboard/clipboard.min.js"></script>
+<script src="fec-analysis_files/libs/quarto-html/quarto.js"></script>
+<script src="fec-analysis_files/libs/quarto-html/popper.min.js"></script>
+<script src="fec-analysis_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="fec-analysis_files/libs/quarto-html/anchor.min.js"></script>
+<link href="fec-analysis_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="fec-analysis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="fec-analysis_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="fec-analysis_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="fec-analysis_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">SDS 192 Mini-Project 2</h1>
+<p class="subtitle lead">SDS 192</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    Nancy Jimenez 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Smith College
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Aaliyah Viera 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Smith College
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    Elaine Chen 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Smith College
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 10, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6      ✔ purrr   0.3.4 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.4.1 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fec16)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Look at help file</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>?contributions</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the contributions data frame only contains the first 1000 rows:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>contributions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,000 × 15
+   cmte_id   amndt_ind rpt_tp transa…¹ trans…² entit…³ name  city  state zip_c…⁴
+   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  
+ 1 C00002766 N         M8     G2016    24K     CCM     THE … LOWE… MA    01853  
+ 2 C00101485 N         M7     G2016    24K     CCM     FRIE… OREF… PA    18069  
+ 3 C90011156 N         YE     G2016    24E     IND     BREW… SEAT… WA    981013…
+ 4 C00342113 N         30G    G2016    24K     CCM     RODN… TAYL… IL    62568  
+ 5 C90011156 N         YE     G2016    24E     IND     CONY… CINC… OH    452291…
+ 6 C00161786 A         30G    &lt;NA&gt;     24C     ORG     NATI… LEAD… CO    80461  
+ 7 C00497073 N         M7     G2016    24K     CCM     CATH… LAS … NV    89139  
+ 8 C90011156 N         Q3     G2016    24A     IND     HOWE… PITT… PA    152063…
+ 9 C90011156 N         Q3     G2016    24A     IND     RAHN… CLEV… OH    441205…
+10 C00513531 N         Q3     G2016    24K     CCM     KIM … VEST… NY    138511…
+# … with 990 more rows, 5 more variables: transaction_dt &lt;date&gt;,
+#   transaction_amt &lt;dbl&gt;, other_id &lt;chr&gt;, cand_id &lt;chr&gt;, tran_id &lt;chr&gt;, and
+#   abbreviated variable names ¹​transaction_pgi, ²​transaction_tp, ³​entity_tp,
+#   ⁴​zip_code</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download full contributions data from web and overwrite contributions using:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># read_all_*() function.</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># You will need to install the usethis package for this line of code to work</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>contributions <span class="ot">&lt;-</span> <span class="fu">read_all_contributions</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Downloading from 'https://www.fec.gov/files/bulk-downloads/2016/pas216.zip'
+✔ Download stored in '/var/folders/5f/zwlm5w_s2g9ggyf0wjh5474h0000gn/T/RtmpujlVHW/pas216.zip'
+✔ Unpacking ZIP file into 'pas216/' (1 files extracted)
+✔ Deleting 'pas216.zip'
+Rows: 0 Columns: 22
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (22): CMTE_ID, AMNDT_IND, RPT_TP, TRANSACTION_PGI, IMAGE_NUM, TRANSACTIO...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Now contributions has full 516,394 rows</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>contributions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 516,385 × 15
+   cmte_id   amndt_ind rpt_tp transa…¹ trans…² entit…³ name  city  state zip_c…⁴
+   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  
+ 1 C00411116 N         M4     P2016    24K     COM     ADAM… LOS … CA    90017  
+ 2 C00411116 N         M4     P2016    24K     COM     COMM… SANT… CA    92706  
+ 3 C00411116 N         M4     P2018    24K     COM     DEB … LINC… NE    68506  
+ 4 C00411116 N         M4     P2018    24K     COM     FEIN… WASH… DC    20003  
+ 5 C00411116 N         M4     P2016    24K     COM     GALL… PHOE… AZ    85001  
+ 6 C00411116 N         M4     P2016    24K     COM     GRAV… CALH… GA    30703  
+ 7 C00411116 N         M4     P2016    24K     COM     LANG… WARW… RI    02886  
+ 8 C00411116 N         M4     P2016    24K     COM     MARK… PEAR… HI    96782  
+ 9 C00411116 N         M4     P2016    24K     COM     MCCO… ST. … MN    55114  
+10 C00411116 N         M4     P2016    24K     COM     NITA… WHIT… NY    10605  
+# … with 516,375 more rows, 5 more variables: transaction_dt &lt;date&gt;,
+#   transaction_amt &lt;dbl&gt;, other_id &lt;chr&gt;, cand_id &lt;chr&gt;, tran_id &lt;chr&gt;, and
+#   abbreviated variable names ¹​transaction_pgi, ²​transaction_tp, ³​entity_tp,
+#   ⁴​zip_code</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Group member 1 work here!</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Which state is each contributor located?</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>contributors_loc_donations <span class="ot">&lt;-</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  contributions <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(cand_id, name, state, transaction_amt, transaction_tp, tran_id) <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(transaction_tp <span class="sc">==</span> <span class="st">"24E"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(transaction_amt))</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>contributors_loc_donations</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 140,044 × 6
+   cand_id   name                    state transaction_amt transaction…¹ tran_id
+   &lt;chr&gt;     &lt;chr&gt;                   &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;  
+ 1 P80001571 STARBOARD STRATEGIC     VA            7209482 24E           F57.63…
+ 2 P60008059 OATH STRATEGIES LLC     VA            6666566 24E           SE24.1…
+ 3 P60008059 OATH STRATEGIES LLC     VA            4537678 24E           SE24.0…
+ 4 P60008059 OATH STRATEGIES LLC     VA            4423057 24E           SE24.1…
+ 5 P60008059 OATH STRATEGIES LLC     VA            4173234 24E           SE24.1…
+ 6 P60008059 OATH STRATEGIES LLC     VA            4125000 24E           SE24.0…
+ 7 P80001571 TANGIBLE MEDIA INC      NY            3000000 24E           SE24.9…
+ 8 P60008059 OATH STRATEGIES LLC     VA            2970074 24E           SE24.1…
+ 9 P60006723 TARGET ENTERPRISES, LLC CA            2758566 24E           SE.6793
+10 P60008059 OATH STRATEGIES LLC     VA            2571000 24E           SE24.0…
+# … with 140,034 more rows, and abbreviated variable name ¹​transaction_tp</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Group member 2 work here!</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Which state is each candidate located?</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>candidate_loc_donations <span class="ot">&lt;-</span> </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  candidates <span class="sc">|&gt;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(cand_id, cand_name, cand_st)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>candidate_loc_donations</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4,699 × 3
+   cand_id   cand_name                cand_st
+   &lt;chr&gt;     &lt;chr&gt;                    &lt;chr&gt;  
+ 1 H0AL02087 ROBY, MARTHA             AL     
+ 2 H0AL02095 JOHN, ROBERT E JR        AL     
+ 3 H0AL05163 BROOKS, MO               AL     
+ 4 H0AL07086 SEWELL, TERRYCINA ANDREA AL     
+ 5 H0AR01083 CRAWFORD, ERIC ALAN RICK AR     
+ 6 H0AR03055 WOMACK, STEVE            AR     
+ 7 H0AZ01259 GOSAR, PAUL DR.          AZ     
+ 8 H0CA03078 BERA, AMERISH            CA     
+ 9 H0CA10073 DESAULNIER, MARK         CA     
+10 H0CA10149 GARAMENDI, JOHN          DC     
+# … with 4,689 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Group member 3 work here!</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Are contributors donating support money to candidates from their own states?</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>contributors_loc_donations <span class="sc">|&gt;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(candidate_loc_donations, <span class="at">by =</span> <span class="st">"cand_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">did_the_states_match =</span> <span class="fu">case_when</span>(state <span class="sc">==</span> cand_st <span class="sc">~</span> <span class="st">"Yes"</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"No"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(did_the_states_match) <span class="sc">|&gt;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">number_of_yes_or_no =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  did_the_states_match number_of_yes_or_no
+  &lt;chr&gt;                              &lt;int&gt;
+1 No                                 83792
+2 Yes                                55793</code></pre>
+</div>
+</div>
+<section id="blog-post" class="level1">
+<h1>Blog post</h1>
+<p>The question we wanted to answer through the data analytical process was investigating if contributors supporting candidates were particularly biased to candidates from their own state. When looking at the contributions data set, we saw information on the contributors and the amount of money they donated in the 2016 election cycle. Then, when looking at the candidates data set we were able to see the data on each candidate and the amount of donations they got from each contributor in the 2015-2016 election cycle. In the first data chunk, we wrangled the data from the contributions data set to find out what state each contributor was located in, and how much money they donated throughout the election. In the second chuck, we did a similar wrangling, looking at the candidate data set, finding out location and donation size. Lastly, in the third data set, we joined the two wrangled data frames in order to see if there was any overlap between candidates and contributors. To answer the first question, we created a table by using candidates as the observation and by selecting candidate ID, candidate name, and candidate state as the columns. The candidate state column indicates that the states candidates currently live in are quite dispersed, and the states that have the highest number of candidates are California, Texas, and Florida. To answer the second question, we also created a table that used contributors, specifically those who donated support money, as the observation. We then selected contributor ID, contributor name, contributor state, transaction amount, and transaction type as the column. The contributor state column demonstrates that although the states that contributors currently live in are dispersed, the number of contributors from Ohio, Pennsylvania, and North Carolina are the highest. To answer the third question, we joined the tables created in the previous two questions by using candidate ID as the joining key, added a new variable based on whether the states that candidates and contributors lived in matched, and then aggregated the data to create a final table that contains the number of matches and mismatches. The result demonstrates that cases where contributors did not donate support money to candidates from their own state are much higher. From our analysis of the data, it was clear that contributors were donating more money to support candidates that were not from their own states. This implies that there are more important outside factors, other than where the candidates reside, that influence who contributors may tend to support, such as political beliefs, gender, occupation, and or family views of certain political candidates. When considering the ethical concerns behind this analysis and when joining data frames across data frames it is important to consider why certain specific information regarding data frames do not appear and or are missing. Specifically, in the candidates data frame, occupation is not a listed column name whereas in the individuals and transactions data frame it is. This may reveal an author bias in hiding other important and underlying factors that may reveal trends in who contributors tend to support more. It is important that our analysis of data is unbiased and allows data scientists and the public to analyze information from a variety of sources and viewpoints and is easily accessible to them. Rather, it takes joining and data wrangling to uncover these trends.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
