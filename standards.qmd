@@ -2,11 +2,11 @@
 title: "SDS 192 Mini-Project 2 Standards"
 subtitle: "SDS 192"
 author: 
-- name: Author One
+- name: Nancy Jimenez
   affiliation: Smith College
-- name: Author Two
+- name: Aaliyah Viera
   affiliation: Smith College
-- name: Author Three
+- name: Elaine Chens
   affiliation: Smith College
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
 source:
@@ -24,13 +24,20 @@ output:
 
 # Transforming Data
 
-Fill response here...
+We demonstrated the ability to subset data by using the select and filter function in the first question's code and by using the select function in the second question's code.  
+We demonstrated the ability to aggregate data by using the group by and summarize function in the third question's code. 
+We demonstrated an ability to interpret the results of data wrangling by stating how select, filter, group by, and summarize function transformed the data frame as well as how the transformed data frame looked like. 
 
 # Joining Data
 
-Fill response here...
+We demonstrated the ability to join data frames by joining the data frame we created in the first two questions' code. 
+We demonstrated the ability to select the most appropriate type of join by choosing inner join in our third question's code, because we only wanted to see rows where both the contributor's information and the candidate's information are present. 
+WE demonstrated the ability to reflect upon ethical concerns of joining information across data frames in our third paragraph of the blog post. 
+
 
 # GitHub
 
-Fill response here...
+We demonstrated the ability to delegate tasks effectively via Issues by creating Issues and assigning group members their work. Because group members can only close the issue after they committed and pushed their code and blog post paragraph, the Issues section makes process check and communication easier. 
+We demonstrated the ability to collaborate across multiple GitHub branches by creating branches of our own names and coding in our own branches. 
+We demonstrated the ability to review each other's code by creating pull requests and assigning group members to review before merging the code to the main branch. 
 

@@ -2,11 +2,11 @@
 title: "SDS 192 Mini-Project 2 Contributions"
 subtitle: "SDS 192"
 author: 
-- name: Author One
+- name: Nancy Jimenez
   affiliation: Smith College
-- name: Author Two
+- name: Aaliyah Viera
   affiliation: Smith College
-- name: Author Three
+- name: Elaine Chen
   affiliation: Smith College
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
 source:
@@ -22,14 +22,17 @@ output:
 ---
 
 
-# Group Member 1: NAME
+# Group Member 1: Nancy Jimenez
 
-Fill response here...
+Wrote the first question's code.
+Wrote paragraph one of the blog post.
 
-# Group Member 2: NAME
+# Group Member 2: Aaliyah Viera
 
-Fill response here...
+Wrote the second question's code.
+Wrote paragraph three of the blog post.
 
-# Group Member 3: NAME
+# Group Member 3: Elaine Chen
 
-Fill response here...
+Wrote the third question's code.
+Wrote paragraph two of the blog post.
